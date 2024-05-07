@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the String Character :");
+        String name = input.next();
+        char goal = 'r';
+        System.out.println(search(name,goal));
+    }
+    static boolean search(String str,char goal)
+    {
+        if(str.length()==0)
+        {
+            return false;
+        }
+        for(int i=0;i<=str.length();i++){
+            if(goal == str.charAt(i)){
+                return true;
+            }
+        }
+        return false;
+    }
+}
