@@ -1,0 +1,15 @@
+class Main{
+    public static void main(String[] args) {
+        int[] arr = {12,13,17,5,20,34};
+        System.out.println("The Maximum Value in the given Array is "+max(arr));
+    }
+    static int max(int[] arr){
+        int res = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if(arr[i]>res){
+                res = arr[i];
+            }
+        }
+       return res;
+    }
+}
