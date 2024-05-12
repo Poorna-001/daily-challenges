@@ -1,0 +1,30 @@
+class Main{
+public static void main(String[] args) {
+    int nums[] = {21,3,213,1076,16};
+    System.out.println("The number of Even digits present in an array " +numbers(nums));
+}
+static int numbers(int[] nums) {
+    int count = 0;
+
+    for (int num : nums) {
+        if(even(num)) {
+            count++;
+        }
+
+    } return count;
+}
+static boolean even(int num){
+    int numberOfDigits =digits(num);
+    if(numberOfDigits % 2==0){
+        return true;
+    }return false;
+}
+public static int digits(int num) {
+    int count = 0;
+    while (num > 0) {
+        count++;
+        num = num / 10;
+    }
+    return count;
+}
+}
