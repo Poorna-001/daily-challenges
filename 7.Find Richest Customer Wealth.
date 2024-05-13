@@ -1,7 +1,7 @@
 class Hello {
     public static void main(String[] args){
         int[][] accounts={{6,7,2},{2,7,6}};
-        System.out.println(maximumWealth(accounts));
+        System.out.println(" The Richest Customer Wealth : "  +maximumWealth(accounts));
     }
     public static int maximumWealth(int[][] accounts){
 
