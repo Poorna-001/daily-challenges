@@ -1,0 +1,33 @@
+class Main {
+    public static void main(String[] args) {
+        // Test case with given letters and target
+        char letters[] = {'e', 'q', 'r', 't'};
+        char target = 's';
+
+        // Call the function and store the result
+        char ans = nextGreatestLetter(letters, target);
+
+        // Print the result
+        System.out.println(ans);
+    }
+
+    static char nextGreatestLetter(char[] letters, char target) {
+        int start = 0;
+        int end = letters.length - 1;
+
+        // Binary search to find the smallest letter greater than target
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+
+            if (target < letters[mid]) {
+                end = mid - 1;
+            } else {
+                start = mid + 1;
+            }
+        }
+
+        // Return the smallest character greater than target,
+        // If start is out of bounds, it wraps around to the first character
+        return letters[start % letters.length];
+    }
+}
