@@ -1,0 +1,33 @@
+class Main{
+    public static void main(String[] args){
+        int[] arr={3,5,7,59,80,100,240,280,460,570,909,293,3920};
+        int target=100;
+        System.out.print(findlength(arr,target));
+    }
+    static int findlength(int[] arr,int target) {
+        int start = 0;
+        int end = 1;
+
+        while (target > arr[end]) {
+            int newStart = end + 1;
+            end = end + (end - start + 1) * 2;
+            start = newStart;
+        }
+        return BinarySearch(arr,target,start,end);
+    }
+    static int BinarySearch(int[] arr,int target, int start, int end){
+        while(start <= end){
+
+            int mid = start + (end - start)/ 2;
+
+            if(target < arr[mid]){
+                end=mid -1;
+            } else if (target>arr[mid]) {
+                start=mid+1;
+            }
+            else{
+                return mid;
+            }
+        }
+        return -1;
+    }  }
