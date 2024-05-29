@@ -1,9 +1,9 @@
-class Main {
+class Palindrome{
     public static void main(String args[]){
         String str = "cddc";
-        System.out.println(isMain(str));
+        System.out.println(isPalindrome(str));
     }
-    public static boolean isMain(String str){
+    public static boolean isPalindrome(String str){
         if(str == null || str.length() ==0 ){
             str = str.toLowerCase();
             for (int i =0;i<str.length() -1/2;i++){
