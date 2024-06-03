@@ -1,0 +1,24 @@
+import java.util.Arrays;
+class Main {
+    public static void main(String[] args){
+        int[] g={6,5,7};
+        int[] s={5,5};
+        System.out.println(findContentChildren(g,s));
+    }
+    public static int findContentChildren(int[] g, int[] s) {
+        Arrays.sort(g);
+        Arrays.sort(s);
+        int result=0;
+        int child=g.length-1;
+        int cookie=s.length-1;
+
+        while(child >=0 && cookie >=0){
+            if(s[cookie]>=g[child]){
+                result++;
+                cookie--;
+            }
+            child--;
+        }
+        return result;
+    }
+}
