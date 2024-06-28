@@ -1,0 +1,20 @@
+class Main {
+    public static void main(String[] args) {
+        int num = 10;
+        System.out.println(NumberOfSteps(num));
+    }
+
+    public static int NumberOfSteps(int num) {
+        int count = 0;
+        while (num > 0) {
+            if (num % 2 == 0) {
+                num /= 2;
+            } else {
+                num -= 1;
+            }
+            count++;
+        }
+        return count;
+    }
+}
+
